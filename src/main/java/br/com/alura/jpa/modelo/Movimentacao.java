@@ -13,7 +13,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-
 @Entity
 public class Movimentacao {
 
@@ -27,10 +26,10 @@ public class Movimentacao {
 	private TipoMovimentacao tipoMovimentacao;
 	private LocalDateTime data;
 	private String descricao;
-	
+
 	@ManyToMany
 	private List<Categoria> categorias;
-	
+
 	@ManyToOne
 	private Conta conta;
 
@@ -89,9 +88,12 @@ public class Movimentacao {
 	public void setCategorias(List<Categoria> categorias) {
 		this.categorias = categorias;
 	}
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Movimentacao [id=" + id + "," + " valor=" + valor + "," + " tipoMovimentacao=" + tipoMovimentacao + ","
+				+ " data=" + data + "," + " descricao=" + descricao + "," + " categorias=" + categorias + ","
+				+ " conta=" + conta + "]";
+	}
 
 }

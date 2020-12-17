@@ -9,9 +9,9 @@ import javax.persistence.Id;
 public class Conta {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private Integer agencia;
 	private Integer numero;
 	private String titular;
@@ -56,5 +56,11 @@ public class Conta {
 	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Conta [id=" + id + ", agencia=" + agencia + ", numero=" + numero + ", titular=" + titular + ", saldo="
+				+ saldo + "]";
+	}
+
 }

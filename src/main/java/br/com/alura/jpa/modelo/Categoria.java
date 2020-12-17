@@ -13,12 +13,12 @@ public class Categoria {
 	private Long id;
 
 	private String nome;
-	
+
 	@Deprecated
 	public Categoria() {
-		
+
 	}
-	
+
 	public Categoria(String nome) {
 		this.nome = nome;
 	}
@@ -37,6 +37,11 @@ public class Categoria {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	@Override
+	public String toString() {
+		return "Categoria [id=" + id + ", nome=" + nome + "]";
 	}
 
 }
